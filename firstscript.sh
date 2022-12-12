@@ -26,4 +26,5 @@ sed -i.bak -e "s/^snapshot-keep-recent *=.*/snapshot-keep-recent = 2/;" /root/.r
 sed -i.bak -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = 100/;" /root/.realio-network/config/app.toml
 sed -i.bak -e "s/^pruning-interval *=.*/pruning-interval = 10/;" /root/.realio-network/config/app.toml
 sed -i.bak -e "s/^pruning-keep-every *=.*/pruning-interval = 500/;" /root/.realio-network/config/app.toml
+sed -i.bak -e "s_"tcp://127.0.0.1:26657"_"tcp://0.0.0.0:26657"_;" /root/.realio-network/config/config.toml
 realio-networkd start
